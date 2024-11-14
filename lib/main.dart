@@ -84,7 +84,7 @@ class _BMICalculatorScreenState extends State<BMICalculatorScreen> {
           ),
           Expanded(
             child: Card(
-              color: Color(0xFF1D1E33),
+              color: Color(0xFF3D3A3A),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -102,7 +102,7 @@ class _BMICalculatorScreenState extends State<BMICalculatorScreen> {
                     value: height.toDouble(),
                     min: 100.0,
                     max: 220.0,
-                    activeColor: Colors.pink,
+                    activeColor: Colors.blue,
                     inactiveColor: Colors.grey,
                     onChanged: (double newValue) {
                       setState(() {
@@ -178,7 +178,11 @@ class GenderCard extends StatelessWidget {
           SizedBox(height: 15),
           Text(
             gender,
-            style: TextStyle(fontSize: 18, color: Colors.white),
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal, // Make text bold if selected
+              color: Colors.white,
+            ),
           ),
         ],
       ),
@@ -238,7 +242,7 @@ class RoundIconButton extends StatelessWidget {
         height: 56.0,
       ),
       shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
+      fillColor: Color(0xFF0A2BD3),
       child: Icon(icon, color: Colors.white),
     );
   }
